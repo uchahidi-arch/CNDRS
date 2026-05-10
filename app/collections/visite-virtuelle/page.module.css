@@ -1,0 +1,101 @@
+.page { min-height: 100vh; background: white; }
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.intro {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.intro p { font-size: 17px; color: #666; line-height: 1.8; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+.cardLocked { opacity: 0.7; }
+
+.imgWrap {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .img { transform: scale(1.04); }
+
+.lockOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.lockOverlay span { font-size: 36px; }
+.lockOverlay p { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.8); }
+
+.body { padding: 28px; }
+
+.body h3 { font-size: 20px; color: #111; margin-bottom: 10px; }
+.body p { font-size: 15px; color: #666; line-height: 1.65; margin-bottom: 16px; }
+
+.entrer {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--taupe);
+  transition: color 0.2s;
+}
+
+.entrer:hover { color: var(--taupe-dark); }
+
+.soon { font-size: 14px; color: #bbb; font-style: italic; }
+
+.reelCta {
+  background: var(--beige-bg);
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.reelCta h2 { font-size: 22px; color: #111; margin-bottom: 12px; }
+.reelCta p { font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 20px; }
+
+.ctaBtn {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--taupe);
+  transition: color 0.2s;
+}
+
+.ctaBtn:hover { color: var(--taupe-dark); }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .inner { padding: 40px 20px; }
+}

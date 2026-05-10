@@ -1,0 +1,101 @@
+.page { min-height: 100vh; background: white; }
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 18px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #555;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: all 0.2s;
+}
+
+.filter:hover { border-color: var(--taupe); color: var(--taupe); }
+.filter.active { background: var(--taupe); color: white; border-color: var(--taupe); }
+
+.list { display: flex; flex-direction: column; }
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.item:last-child { border-bottom: none; }
+.item:hover { background: var(--beige-bg); margin: 0 -16px; padding: 24px 16px; border-radius: 6px; }
+
+.itemLeft { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+
+.type {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  align-self: flex-start;
+}
+
+.itemLeft h3 { font-size: 17px; color: #111; line-height: 1.3; }
+
+.meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: #aaa;
+  flex-wrap: wrap;
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--taupe);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.yaMkobeBlock {
+  margin-top: 48px;
+  padding: 24px;
+  background: var(--beige-bg);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.yaMkobeBlock p { font-size: 15px; color: #666; }
+
+.yaMkobeLink { font-size: 15px; font-weight: 600; color: var(--taupe); white-space: nowrap; }
+
+@media (max-width: 600px) {
+  .inner { padding: 40px 20px; }
+  .itemRight { display: none; }
+  .yaMkobeBlock { flex-direction: column; align-items: flex-start; }
+}

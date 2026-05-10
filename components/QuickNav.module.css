@@ -1,0 +1,25 @@
+.bar {
+  background: var(--beige-bg);
+  border-bottom: 1px solid #ddd;
+  padding: 12px 40px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  padding: 6px 16px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  background: white;
+  transition: all 0.2s;
+}
+
+.pill:hover {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+}

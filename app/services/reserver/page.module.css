@@ -1,0 +1,150 @@
+.page { min-height: 100vh; background: white; }
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 60px;
+  align-items: start;
+}
+
+.formSection h2 {
+  font-size: 26px;
+  color: #111;
+  margin-bottom: 32px;
+}
+
+.form { display: flex; flex-direction: column; gap: 20px; }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field { display: flex; flex-direction: column; gap: 8px; }
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 11px 14px;
+  font-size: 15px;
+  font-family: var(--sans);
+  outline: none;
+  transition: border-color 0.2s;
+  background: white;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus { border-color: var(--taupe); }
+
+.field textarea { resize: vertical; }
+
+.btn {
+  background: var(--olive);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 13px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--sans);
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+
+.btn:hover { background: var(--olive-dark); }
+
+.success {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.check { font-size: 52px; color: var(--olive); }
+.success h3 { font-size: 22px; color: #111; }
+.success p { font-size: 16px; color: #666; line-height: 1.7; }
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 120px;
+}
+
+.asideCard {
+  background: var(--beige-bg);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.asideCard h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.jour {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+}
+
+.heure { font-size: 18px; font-weight: 700; color: #111; }
+.ferme { font-size: 15px; color: #aaa; }
+
+.tarif {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+  padding: 7px 0;
+  border-bottom: 1px solid #e8e4de;
+}
+
+.tarif:last-child { border-bottom: none; }
+.tarif span:last-child { font-weight: 600; color: #111; }
+
+.asideCard a {
+  display: block;
+  font-size: 15px;
+  color: var(--taupe);
+  margin-bottom: 6px;
+  transition: color 0.2s;
+}
+
+.asideCard a:hover { color: var(--taupe-dark); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .aside { position: static; }
+  .row { grid-template-columns: 1fr; }
+  .inner { padding: 40px 20px; }
+}

@@ -1,0 +1,104 @@
+.page { min-height: 100vh; }
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.direction {
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #eee;
+}
+
+.direction h2 {
+  font-size: 26px;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.dirCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--beige-bg);
+  padding: 24px;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.dirPhoto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center top;
+  flex-shrink: 0;
+}
+
+.dirCard h3 { font-size: 18px; color: #111; margin-bottom: 4px; }
+.dirCard p { font-size: 15px; color: var(--taupe); font-weight: 500; }
+
+.departements h2 {
+  font-size: 26px;
+  color: #111;
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.card h3 {
+  font-size: 17px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.responsable {
+  font-size: 14px;
+  color: var(--taupe);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.missions {
+  list-style: none;
+  padding: 0;
+}
+
+.missions li {
+  font-size: 14px;
+  color: #666;
+  padding: 4px 0;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.missions li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--taupe);
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .inner { padding: 40px 20px; }
+  .hero { padding: 50px 20px; }
+}

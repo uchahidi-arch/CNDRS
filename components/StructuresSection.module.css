@@ -1,0 +1,115 @@
+.section {
+  padding: 60px 40px;
+  background: white;
+}
+
+.inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background: white;
+  border: 1px solid #eee;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.imgWrap {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .img {
+  transform: scale(1.04);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.08);
+  transition: background 0.3s ease;
+}
+
+.card:hover .overlay {
+  background: rgba(0,0,0,0.18);
+}
+
+.body {
+  padding: 28px 32px;
+  border-top: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover .body {
+  border-color: var(--taupe);
+}
+
+.nom {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0;
+  transition: margin-bottom 0.3s ease;
+}
+
+.card:hover .nom {
+  margin-bottom: 14px;
+}
+
+.hover {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.card:hover .hover {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--taupe);
+  transition: color 0.2s;
+}
+
+.btn:hover { color: var(--taupe-dark); }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .imgWrap { height: 220px; }
+  .section { padding: 40px 20px; }
+  .hover { max-height: none; opacity: 1; }
+  .nom { margin-bottom: 12px; }
+}
