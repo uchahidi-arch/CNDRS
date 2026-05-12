@@ -27,11 +27,6 @@ export default function CollectionsMuseePage() {
       />
 
       <div className={styles.inner}>
-        <div className={styles.stats}>
-          <div className={styles.stat}><span className={styles.num}>870+</span><span className={styles.label}>objets en collection</span></div>
-          <div className={styles.stat}><span className={styles.num}>6</span><span className={styles.label}>salles permanentes</span></div>
-          <div className={styles.stat}><span className={styles.num}>1979</span><span className={styles.label}>année de création</span></div>
-        </div>
 
         <div className={styles.grid}>
           {salles.map((s, i) => (

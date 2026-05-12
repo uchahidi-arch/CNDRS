@@ -1,76 +1,243 @@
-.footer {
-  background: var(--footer-dark);
-  color: rgba(255,255,255,0.8);
-  padding: 48px 40px 20px;
+/* ─── Bande institutionnelle ─────────────────────────────────── */
+.govStripe {
+  background: #0f2218;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 7px 0;
 }
 
-.inner { max-width: 1300px; margin: 0 auto; }
+.govInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-.top {
+.govInner span {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.38);
+  font-family: Georgia, serif;
+}
+
+.govSceau {
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* ─── Corps ──────────────────────────────────────────────────── */
+.footer {
+  background: #152a1e;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.body {
+  padding: 52px 0 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
   display: grid;
-  grid-template-columns: 120px 1fr 1fr 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 32px;
+  grid-template-columns: 1fr 1fr 1fr 200px;
+  gap: 40px;
   align-items: start;
 }
 
-.logoWrap {
-  background: #111;
-  padding: 12px;
-  border-radius: 4px;
+/* ─── Colonnes ───────────────────────────────────────────────── */
+.col {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 9px;
 }
 
-.col h4 {
-  font-size: 16px;
+.colTitle {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 700;
-  color: white;
-  margin-bottom: 12px;
+  margin: 0 0 10px;
 }
 
-.col a, .col span {
-  display: block;
-  font-size: 14px;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 6px;
-  line-height: 1.6;
-  transition: color 0.2s;
+.col a,
+.col span {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.18s ease;
 }
 
-.col a:hover { color: white; }
+.col a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
 
-.social {
-  display: flex;
-  gap: 8px;
+.horaires {
+  font-size: 0.78rem !important;
+  color: rgba(255, 255, 255, 0.28) !important;
+  font-style: italic;
   margin-top: 4px;
 }
 
+.contactLink {
+  margin-top: 6px;
+  font-size: 0.8rem !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.contactLink:hover {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ─── Réseaux sociaux ────────────────────────────────────────── */
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  margin-top: 6px;
+}
+
 .social a {
-  width: 36px;
-  height: 36px;
-  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.18s;
+  display: flex;
+  align-items: center;
+}
+
+.social a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ─── Tutelle ────────────────────────────────────────────────── */
+.sceauBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.sceauLarge {
+  opacity: 0.65;
+}
+
+.republique {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.28);
+  font-family: Georgia, serif;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ─── Identité (logo à droite) ───────────────────────────────── */
+.identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.logoWrap {
+  background: white;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  margin-bottom: 0;
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
-.fb { background: #1877f2; }
-.tw { background: #1da1f2; }
-.yt { background: #ff0000; }
+.logo {
+  border-radius: 50%;
+}
 
+.identitySub {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── Bas ────────────────────────────────────────────────────── */
 .bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 16px;
-  text-align: center;
-  font-size: 12px;
-  color: rgba(255,255,255,0.4);
+  background: #0f2218;
+  padding: 16px 0;
 }
 
-@media (max-width: 900px) {
-  .top { grid-template-columns: 1fr 1fr; }
-  .footer { padding: 32px 20px 16px; }
+.bottomInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottomInner > span {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 28px;
+}
+
+.bottomLinks a {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.bottomLinks a:hover {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .inner {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .identity {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+}
+
+@media (max-width: 700px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 24px;
+    gap: 32px;
+  }
+  .govInner,
+  .bottomInner {
+    padding: 0 24px;
+  }
+  .identity {
+    grid-column: 1 / -1;
+  }
+  .bottomInner {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
 }

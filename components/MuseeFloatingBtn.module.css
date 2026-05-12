@@ -1,0 +1,35 @@
+.btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 100;
+  background: var(--green);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-family: var(--sans);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  transition: background 200ms, transform 200ms, box-shadow 200ms;
+}
+
+.btn:hover {
+  background: var(--green-med);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    bottom: 16px;
+    right: 16px;
+    font-size: 13px;
+    padding: 12px 18px;
+  }
+}

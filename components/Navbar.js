@@ -37,7 +37,6 @@ const NAV = [
     label: "Collections",
     items: [
       { label: "Catalogue de la bibliothèque", href: "/collections/catalogue" },
-      { label: "Fonds d'archives", href: "/collections/archives" },
       { label: "Iconothèque", href: "/collections/iconotheque" },
       { label: "Collections du musée", href: "/collections/musee" },
       { label: "Visite virtuelle", href: "/collections/visite-virtuelle" },
@@ -48,6 +47,7 @@ const NAV = [
     label: "Services",
     items: [
       { label: "Réserver une visite", href: "/services/reserver" },
+      { label: "Fonds d'archives", href: "/services/archives" },
       { label: "Consulter les archives", href: "/services/archives" },
       { label: "Salle de lecture", href: "/services/salle-lecture" },
       { label: "Événements & colloques", href: "/services/evenements" },

@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import MuseeFloatingBtn from '../components/MuseeFloatingBtn'
+import ReservationModal from '../components/ReservationModal'
 
 export const metadata = {
   title: 'CNDRS — Centre National de Documentation et de Recherche Scientifique',
@@ -14,6 +16,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <MuseeFloatingBtn />
+        <ReservationModal />
       </body>
     </html>
   )

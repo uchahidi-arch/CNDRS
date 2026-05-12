@@ -30,17 +30,15 @@ export default function DiasporaPage() {
 
         <div className={styles.services}>
           {[
-            { titre: "Recherche généalogique", desc: "Retrouvez les actes d'état civil de vos ancêtres — naissances, mariages, décès — dans les archives nationales du CNDRS.", icon: "🌳" },
-            { titre: "Reproduction de documents", desc: "Commandez des reproductions numériques haute définition de documents d'archives pour usage personnel ou académique.", icon: "📄" },
-            { titre: "Fonds photographiques", desc: "Accédez aux collections photographiques historiques du CNDRS — portraits de famille, cérémonies, paysages d'époque.", icon: "📷" },
-            { titre: "Archives des sultanats", desc: "Consultez les chroniques et documents historiques sur les sultanats, les familles nobles et l'histoire politique de l'archipel.", icon: "📜" },
+            { label: "Généalogie", titre: "Recherche généalogique", desc: "Retrouvez les actes d'état civil de vos ancêtres — naissances, mariages, décès — dans les archives nationales du CNDRS." },
+            { label: "Archives", titre: "Reproduction de documents", desc: "Commandez des reproductions numériques haute définition de documents d'archives pour usage personnel ou académique." },
+            { label: "Photographies", titre: "Fonds photographiques", desc: "Accédez aux collections photographiques historiques du CNDRS — portraits de famille, cérémonies, paysages d'époque." },
+            { label: "Sultanats", titre: "Archives des sultanats", desc: "Consultez les chroniques et documents historiques sur les sultanats, les familles nobles et l'histoire politique de l'archipel." },
           ].map((s, i) => (
             <div key={i} className={styles.serviceCard}>
-              <span className={styles.icon}>{s.icon}</span>
-              <div>
-                <h3>{s.titre}</h3>
-                <p>{s.desc}</p>
-              </div>
+              <span className={styles.cardLabel}>{s.label}</span>
+              <h3>{s.titre}</h3>
+              <p>{s.desc}</p>
             </div>
           ))}
         </div>
